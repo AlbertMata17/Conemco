@@ -162,8 +162,8 @@ if(isset($_POST['add-company']))
                          </div>
                          <div class="form-group row">
                             <div class="col-md-12 passfieldcont">
-                                 <div class="field-label"><label for="description"><?php echo $lang["Description"]; ?>*</label></div>
-                            	<input type="text" name="description" class="form-control passwordfield" required>
+                                 <div class="field-label"><label for="description"><?php echo $lang["Description"]; ?></label></div>
+                            	<input type="text" name="description" class="form-control passwordfield">
                             </div>
                          </div>
                          <div class="form-group row">
@@ -175,7 +175,7 @@ if(isset($_POST['add-company']))
                          <div class="form-group row">
                             <div class="col-md-10">
                                  <div class="field-label"><label for="skype_id"><?php echo $lang["Company"]; ?></label></div>
-								 <select required class="form-control" id="compan" name="idcompany">
+								 <select  class="form-control" id="compan" name="idcompany">
 		 <option value=""><?php echo $lang['Select a company']; ?></option>
 		<?php $recentlyRegisteredUsers=company::findBySql("select * from companies where status=0 ORDER BY idcompany DESC");
 				foreach($recentlyRegisteredUsers as $recentlyRegisteredUser){ 
@@ -221,7 +221,7 @@ if(isset($_POST['add-company']))
                          <div class="form-group row">
                             <div class="col-md-10">
                                 <div class="field-label"><label for="idtype"><?php echo $lang["Type contact"]; ?></label></div>
-								<select required class="form-control" name="idtype" id="tipocontacto">
+								<select class="form-control" name="idtype" id="tipocontacto">
 		 <option value=""><?php echo $lang['Select a type contact']; ?></option>
 		<?php $recentlyRegisteredUsers=Type_Diary::findBySql("select * from categories_diary where status=0 ORDER BY idtype DESC");
 				foreach($recentlyRegisteredUsers as $recentlyRegisteredUser){ 
@@ -299,7 +299,7 @@ if(isset($_POST['add-company']))
                          <div class="form-group row">
                             <div class="col-md-12 passfieldcont">
                                  <div class="field-label"><label for="description"><?php echo $lang["Description"]; ?>*</label></div>
-                            	<input type="text" id="descripcion" name="description" class="form-control passwordfield" required>
+                            	<input type="text" id="descripcion" name="description" class="form-control">
                             </div>
                          </div>
                         
@@ -373,7 +373,7 @@ if(isset($_POST['add-company']))
                             <div class="col-md-12">
              	<div class="field-label"><label for="name"><?php echo $lang["name company"]; ?></label></div>
 
-				 <input type="text" name="typeTite" id="nombre" class="form-control" placeholder="<?php echo $lang['title diary']; ?>" required>
+				 <input type="text" name="typeTite" id="nombre" class="form-control" placeholder="<?php echo $lang['title diary']; ?>">
                             </div>
                          </div>
                          <div class="form-group row">
