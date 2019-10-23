@@ -274,7 +274,7 @@ if(isset($_POST['add-company']))
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Compañía</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -290,21 +290,21 @@ if(isset($_POST['add-company']))
                 <div class="row">
                 	<div class="col-md-6">
                     	<div class="form-group row">
-                            <div class="col-md-12">
+                            <div class="col-md-12" style="text-align: left;">
              	<div class="field-label"><label for="name"><?php echo $lang["name company"]; ?></label></div>
 
                             	<input type="text" name="name" id="nombres" class="form-control" required>
                             </div>
                          </div>
                          <div class="form-group row">
-                            <div class="col-md-12 passfieldcont">
+                            <div class="col-md-12 passfieldcont" style="text-align: left;">
                                  <div class="field-label"><label for="description"><?php echo $lang["Description"]; ?>*</label></div>
                             	<input type="text" id="descripcion" name="description" class="form-control">
                             </div>
                          </div>
                         
                          <div class="form-group row">
-                            <div class="col-md-12">
+                            <div class="col-md-12" style="text-align: left;">
                                  <div class="field-label"><label for="contact"><?php echo $lang["contact"]; ?></label></div>
                             	<input type="text" id="contacto" name="contact" class="form-control">
                             </div>
@@ -315,13 +315,13 @@ if(isset($_POST['add-company']))
                     <div class="col-md-6">
                     	
                          <div class="form-group row">
-                            <div class="col-md-12">
+                            <div class="col-md-12" style="text-align: left;">
                                  <div class="field-label"><label for="address"><?php echo $lang["Address"]; ?></label></div>
                             	<input type="text" id="direccion" name="address" class="form-control">
                             </div>
                          </div>
                          <div class="form-group row">
-                            <div class="col-md-12">
+                            <div class="col-md-12" style="text-align:left;">
                                   <div class="field-label"><label for="phone"><?php echo $lang["Phone client"]; ?></label></div>
                             	<input type="text" id="telefonos" id="telefono" name="phone" class="form-control">
                             </div>
@@ -368,18 +368,18 @@ if(isset($_POST['add-company']))
            
               <div class="col-md-12 user-infos">
                 <div class="row">
-                	<div class="col-md-6">
+                	<div class="col-md-11" style="margin-left:20px;">
                     	<div class="form-group row">
-                            <div class="col-md-12">
+                            <div class="col-md-12" style="text-align: left;">
              	<div class="field-label"><label for="name"><?php echo $lang["name company"]; ?></label></div>
 
 				 <input type="text" name="typeTite" id="nombre" class="form-control" placeholder="<?php echo $lang['title diary']; ?>">
                             </div>
                          </div>
                          <div class="form-group row">
-                            <div class="col-md-12 passfieldcont">
+                            <div class="col-md-12 passfieldcont" style="text-align: left;">
                                  <div class="field-label"><label for="description"><?php echo $lang["Description"]; ?>*</label></div>
-								 <textarea class="form-control" placeholder="<?php echo $lang['Description']; ?>" name="description"></textarea>
+								 <textarea class="form-control" id="descrip" placeholder="<?php echo $lang['Description']; ?>" name="description"></textarea>
                             </div>
                          </div>
                         
@@ -433,11 +433,9 @@ $(document).ready(function(){
 
 $("#nombre").focus();
 $(".mod1").click(function(){
-	document.getElementById("nombres").value="";
-document.getElementById("direccion").value="";
-document.getElementById("descripcion").value="";
-document.getElementById("telefonos").value="";
-document.getElementById("contacto").value="";
+	document.getElementById("nombre").value="";
+document.getElementById("descrip").value="";
+
 
 		$('#crear1').modal('toggle');
 		$("#crear1").removeClass("fade");
