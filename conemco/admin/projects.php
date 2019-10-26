@@ -100,6 +100,7 @@ if($msgstatus == 'success'){
 }
 if($msgstatus == 'created'){
 					$message="<div class='container extra-top'><p class='alert alert-success'><i class='fa fa-check'></i> ".$notmsgb."</p></div>";
+
 }
 if($msgstatus == 'fail'){		 
 $message="<div class='container extra-top'><p class='col-md-12 alert alert-danger'><i class='fa fa-times'></i> ".$notmsgc."</p></div>";
@@ -395,4 +396,106 @@ echo $pagLink . '
 </div>        
 </div>
 </div>
+<div class="modal fade" id="crear1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Tipo de Contacto</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+	  <div class="add-company">
+	  <iframe name="votar" style="display:none;"></iframe>
+
+	  <form method="post" id="formulario" action="#" target="votar" enctype="multipart/form-data">
+			<div class="row">
+           
+              <div class="col-md-12 user-infos">
+                <div class="row">
+                	<div class="col-md-11" style="margin-left:20px;">
+                    	<div class="form-group row">
+                            <div class="col-md-12" style="text-align: left;">
+             	<div class="field-label"><label for="name"><?php echo $lang["name company"]; ?></label></div>
+
+				 <input type="text" name="typeTite" id="nombre" class="form-control" placeholder="<?php echo $lang['title diary']; ?>">
+                            </div>
+                         </div>
+                         <div class="form-group row">
+                            <div class="col-md-12 passfieldcont" style="text-align: left;">
+                                 <div class="field-label"><label for="description"><?php echo $lang["Description"]; ?>*</label></div>
+								 <textarea class="form-control" id="descrip" placeholder="<?php echo $lang['Description']; ?>" name="description"></textarea>
+                            </div>
+                         </div>
+                        
+                       
+						 <div class="col-md-6">
+<div class="form-group">
+	<input type="hidden" name="status" value="0" >
+	<input type="hidden" name="archive" value="0" >
+</div>
+
+</div>
+                        
+                    </div>
+                    <div class="col-md-6">
+                    	
+                         
+                        
+                      
+                        
+						 
+                    </div>
+					<div class="col-md-12 submit-btnal">
+					<div class="form-group row">
+                         <input class="bigbutton" id="guarda1" name="add-type" value="<?php echo $lang['Add New type']; ?>" type="submit"/>
+					</div>
+					</div>
+					</div>
+                    
+                </div>
+              </div>
+            </div>
+              <div class="clearfix"></div>
+            </form> 
+      </div>
+     
+    </div>
+  </div>
+</div>
+<script src="../assets/js/jquery.js" type="text/javascript"></script>
+<script>
+$(document).ready(function(){
+
+var nuevoval="<?php echo $msgstatus?>"
+$(".mod1").click(function(){
+	document.getElementById("nombre").value="";
+document.getElementById("descrip").value="";
+
+
+		$('#crear1').modal('toggle');
+		$("#crear1").removeClass("fade");
+		$("#crear1").removeAttr("style");
+
+
+	});
+	$(".close1").click(function(){
+		$('.modal').modal('hide');
+
+
+	});
+	$("#guarda1").click(function(){
+
+		$('.modal').modal('hide');
+		
+		
+		
+		
+	});
+
+
+	
+});
+</script>
 <?php  include("../templates/admin-footer.php"); ?>

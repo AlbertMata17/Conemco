@@ -64,6 +64,7 @@ $accountStatus=$user->accountStatus;
 			<!--</ul>
 			</li>-->
 			<li class="<?php echo active('timesheet.php'); ?>"><a href="<?php echo $url; ?>admin/timesheet.php"> <span><i class="fa fa-list-alt" aria-hidden="true"></i></span><?php echo $lang['Time sheet']; ?> <i class="fa fa-chevron-right"></i></a></li>
+			<li class="<?php echo active('calendario.php'); ?>"><a href="<?php echo $url; ?>admin/calendario.php"> <span><i class="fa fa-list-alt" aria-hidden="true"></i></span><?php echo $lang['Calendar']; ?> <i class="fa fa-chevron-right"></i></a></li>
 
 			<li class="<?php echo active('projects.php'); ?>"><a href="#" data-toggle="collapse" data-target="#project-menu"><span><i class="fa fa-user" aria-hidden="true"></i></span> <?php echo $lang['Projects']; ?> <i class="fa fa-plus" aria-hidden="true"></i></a>
 			<ul id="project-menu" class="collapse">
@@ -130,6 +131,7 @@ $accountStatus=$user->accountStatus;
             <li class="<?php echo active('edit-profile.php'); ?>"> <a href="<?php echo $url; ?>client/edit-profile.php"><span><i class="fa fa-user" aria-hidden="true"></i></span><?php echo $lang['Profile']; ?><i class="fa fa-chevron-right"></i></a></li>
             <li class="<?php echo active('logout.php'); ?>"> <a href="<?php echo $url; ?>logout.php"><span><i class="fa fa-sign-out" aria-hidden="true"></i></span><?php echo $lang['Logout']; ?><i class="fa fa-chevron-right"></i></a></li>
 			<li class="<?php echo active('timesheet.php'); ?>"><a href="<?php echo $url; ?>admin/timesheet.php"> <span><i class="fa fa-list-alt" aria-hidden="true"></i></span><?php echo $lang['Time sheet']; ?> <i class="fa fa-chevron-right"></i></a></li>
+			<li class="<?php echo active('calendario.php'); ?>"><a href="<?php echo $url; ?>admin/calendario.php"> <span><i class="fa fa-list-alt" aria-hidden="true"></i></span><?php echo $lang['Calendar']; ?> <i class="fa fa-chevron-right"></i></a></li>
 
 
 

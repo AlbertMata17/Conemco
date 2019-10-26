@@ -184,6 +184,8 @@ input[type="checkbox"],
 input[type="radio"] {
   padding: 0;
   box-sizing: border-box;
+    -webkit-appearance: checkbox;
+
 }
 
 input[type="search"] {

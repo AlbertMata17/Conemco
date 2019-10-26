@@ -6,7 +6,7 @@ require_once('database.php');
 class Customer extends DatabaseObject {
 	
 	protected static $tblName="customers";
-	protected static $tblFields = array('idcustomer', 'name', 'description', 'phone', 'email', 'address', 'status','created_by','modified_by','idcompany','idtype','reference','c_id','country','city','trash');
+	protected static $tblFields = array('idcustomer', 'name', 'description', 'phone', 'email', 'address', 'status','created_by','modified_by','idcompany','idtype','reference','c_id','country','city','trash','Job_Title','Professional_Affiliations','State_Region','Gender','Industry','Sector','Division','Field_of_Study','Preferred_Language','Buyer_Persona');
 	
 	public $idcustomer;
 	public $name;
@@ -24,6 +24,16 @@ class Customer extends DatabaseObject {
 	public $country;
 	public $city;
 	public $trash;
+	public $Job_Title;
+	public $Professional_Affiliations;
+	public $State_Region;
+	public $Gender;
+	public $Industry;
+	public $Sector;
+	public $Division;
+	public $Field_of_Study;
+	public $Preferred_Language;
+	public $Buyer_Persona;
 
 	
 	public $message=NULL;

@@ -41,7 +41,7 @@ if(isset($_POST['add-company']))
 		
 
 			$company->trash		= 0 ;
-			
+
 			  $saveType=$company->save();
 			  if($saveType){
 			  $h="valor";
@@ -98,7 +98,16 @@ if(isset($_POST['add-company']))
 			$customer->city		=$_POST['city'];
 
 			$customer->trash		= 0 ;
-
+			$customer->Job_Title		=$_POST['Job_Title'];
+			$customer->Professional_Affiliations		=$_POST['Professional_Affiliations'];
+			$customer->State_Region		=$_POST['State/Region'];
+			$customer->Gender		=$_POST['Gender'];
+			$customer->Industry		=$_POST['Industry'];
+			$customer->Sector		=$_POST['Sector'];
+			$customer->Division		=$_POST['Division'];
+			$customer->Field_of_Study		=$_POST['Field_of_Study'];
+			$customer->Preferred_Language		=$_POST['Preferred_Language'];
+			$customer->Buyer_Persona		=$_POST['Buyer_Persona'];
 			  $saveType=$customer->save();
 
 			  $notmessagea = $lang['contact has been created successfully!'];
@@ -197,12 +206,45 @@ if(isset($_POST['add-company']))
                             	<input type="text" name="city" class="form-control">
                             </div>
                          </div>
-                        
+                         <div class="form-group row">
+                            <div class="col-md-12">
+                                 <div class="field-label"><label for="city"><?php echo $lang["Job_Title"]; ?></label></div>
+                            	<input type="text" name="Job_Title" class="form-control">
+                            </div>
+                         </div>
+						 <div class="form-group row">
+                            <div class="col-md-12">
+                                 <div class="field-label"><label for="city"><?php echo $lang["Professional_Affiliations"]; ?></label></div>
+                            	<input type="text" name="Professional_Affiliations" class="form-control">
+                            </div>
+                         </div>
+						 <div class="form-group row">
+                            <div class="col-md-12">
+                                 <div class="field-label"><label for="city"><?php echo $lang["State/Region"]; ?></label></div>
+                            	<input type="text" name="State/Region" class="form-control">
+                            </div>
+                         </div>
+						 <div class="form-group row">
+                            <div class="col-md-12">
+                                 <div class="field-label"><label for="Gender"><?php echo $lang["Gender"]; ?></label></div>
+								<select name="Gender" class="form-control">
+								<option value="<?php echo $lang["female"]?>"><?php echo $lang["female"]?></option>
+								<option value="<?php echo $lang["male"]?>"><?php echo $lang["male"]?></option>
+								<option value="<?php echo $lang["neutral"]?>"><?php echo $lang["neutral"]?></option>
+								</select>
+                            </div>
+                         </div>
+						 <div class="form-group row">
+                            <div class="col-md-12">
+                                 <div class="field-label"><label for="Industry"><?php echo $lang["Industry"]; ?></label></div>
+                            	<input type="text" name="Industry" class="form-control">
+                            </div>
+                         </div>
                     </div>
                     <div class="col-md-6">
                     	<div class="form-group row">
                             <div class="col-md-12">
-                                <div class="field-label"><label for="email"><?php echo $lang["Email"]; ?></label></div>
+                                <div class="field-label"><label for="email"><?php echo $lang["Email contact"]; ?></label></div>
                             	<input type="email" name="email" class="form-control">
                             </div>
                          </div>
@@ -248,7 +290,36 @@ if(isset($_POST['add-company']))
 								</select>
                             </div>
                          </div>
-                        
+                         <div class="form-group row">
+                            <div class="col-md-12">
+                                 <div class="field-label"><label for="Sector"><?php echo $lang["Sector"]; ?></label></div>
+                            	<input type="text" name="Sector" class="form-control">
+                            </div>
+                         </div>
+						 <div class="form-group row">
+                            <div class="col-md-12">
+                                 <div class="field-label"><label for="Division"><?php echo $lang["Division"]; ?></label></div>
+                            	<input type="text" name="Division" class="form-control">
+                            </div>
+                         </div>
+						 <div class="form-group row">
+                            <div class="col-md-12">
+                                 <div class="field-label"><label for="Field_of_Study"><?php echo $lang["Field_of_Study"]; ?></label></div>
+                            	<input type="text" name="Field_of_Study" class="form-control">
+                            </div>
+                         </div>
+						 <div class="form-group row">
+                            <div class="col-md-12">
+                                 <div class="field-label"><label for="Preferred_Language"><?php echo $lang["Preferred_Language"]; ?></label></div>
+                            	<input type="text" name="Preferred_Language" class="form-control">
+                            </div>
+                         </div>
+						 <div class="form-group row">
+                            <div class="col-md-12">
+                                 <div class="field-label"><label for="Buyer_Persona"><?php echo $lang["Buyer_Persona"]; ?></label></div>
+                            	<input type="text" name="Buyer_Persona" class="form-control">
+                            </div>
+                         </div>
 						 
                     </div>
 					<div class="col-md-12 submit-btnal">

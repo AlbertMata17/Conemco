@@ -173,7 +173,6 @@ a:hover {
 }
 
 a:not([href]):not([tabindex]) {
-  color: inherit;
   text-decoration: none;
 }
 
@@ -284,6 +283,8 @@ input[type="radio"],
 input[type="checkbox"] {
   box-sizing: border-box;
   padding: 0;
+    -webkit-appearance: checkbox;
+
 }
 
 input[type="date"],

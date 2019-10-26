@@ -49,6 +49,16 @@ if(isset($_POST['update-client'])){
 
                     $country		=$_POST['country'];
                     $city		=$_POST['city'];              
+                    $Job_Title		=$_POST['Job_Title'];              
+                    $Professional_Affiliations		=$_POST['Professional_Affiliations'];              
+                    $State_Region		=$_POST['State/Region'];              
+                    $Gender		=$_POST['Gender'];              
+                    $Industry		=$_POST['Industry'];              
+                    $Sector		=$_POST['Sector'];              
+                    $Division		=$_POST['Division'];              
+                    $Field_of_Study		=$_POST['Field_of_Study'];              
+                    $Preferred_Language		=$_POST['Preferred_Language'];              
+                    $Buyer_Persona		=$_POST['Buyer_Persona'];              
     $sql_up = "UPDATE `customers` SET
     `c_id`='$c_id',
     `name`='$pp_title',
@@ -62,7 +72,17 @@ if(isset($_POST['update-client'])){
     `idtype`='$idtype',
     `reference`='$reference',
     `country`='$country',
-    `city`='$city'
+    `city`='$city',
+    `Job_Title`='$Job_Title',
+    `Professional_Affiliations`='$Professional_Affiliations',
+    `State_Region`='$State_Region',
+    `Gender`='$Gender',
+    `Industry`='$Industry',
+    `Sector`='$Sector',
+    `Division`='$Division',
+    `Field_of_Study`='$Field_of_Study',
+    `Preferred_Language`='$Preferred_Language',
+    `Buyer_Persona`='$Buyer_Persona'
     WHERE `idcustomer`='$pp_id'";
     if ($connect->query($sql_up) === TRUE){
         
@@ -107,6 +127,16 @@ foreach($qur_pro as $qur_ar){
  $country = $qur_ar->country;
  $city = $qur_ar->city;
  $trash = $qur_ar->trash;
+ $Job_Title = $qur_ar->Job_Title;
+ $Professional_Affiliations = $qur_ar->Professional_Affiliations;
+ $State_Region = $qur_ar->State_Region;
+ $Gender = $qur_ar->Gender;
+ $Industry = $qur_ar->Industry;
+ $Sector = $qur_ar->Sector;
+ $Division = $qur_ar->Division;
+ $Field_of_Study = $qur_ar->Field_of_Study;
+ $Preferred_Language = $qur_ar->Preferred_Language;
+ $Buyer_Persona = $qur_ar->Buyer_Persona;
 
  
  $recentlyRegisteredUsers=user::findBySql("select * from users");
@@ -171,12 +201,46 @@ foreach($qur_pro as $qur_ar){
                             </div>
                          </div>
                         
+                         <div class="form-group row">
+                            <div class="col-md-12">
+                                 <div class="field-label"><label for="Job_Title"><?php echo $lang["Job_Title"]; ?></label></div>
+                            	<input type="text" value="<?php echo $Job_Title?>" name="Job_Title" class="form-control">
+                            </div>
+                         </div>
+                         <div class="form-group row">
+                            <div class="col-md-12">
+                                 <div class="field-label"><label for="Professional_Affiliations"><?php echo $lang["Professional_Affiliations"]; ?></label></div>
+                            	<input type="text" value="<?php echo $Professional_Affiliations?>" name="Professional_Affiliations" class="form-control">
+                            </div>
+                         </div>
+                         <div class="form-group row">
+                            <div class="col-md-12">
+                                 <div class="field-label"><label for="State/Region"><?php echo $lang["State/Region"]; ?></label></div>
+                            	<input type="text" value="<?php echo $State_Region?>" name="State/Region" class="form-control">
+                            </div>
+                         </div>
+                         <div class="form-group row">
+                            <div class="col-md-12">
+                                 <div class="field-label"><label for="Gender"><?php echo $lang["Gender"]; ?></label></div>
+								<select name="Gender" class="form-control" id="gender">
+								<option value="<?php echo $lang["female"]?>"><?php echo $lang["female"]?></option>
+								<option value="<?php echo $lang["male"]?>"><?php echo $lang["male"]?></option>
+								<option value="<?php echo $lang["neutral"]?>"><?php echo $lang["neutral"]?></option>
+								</select>
+                            </div>
+                         </div>
+                         <div class="form-group row">
+                            <div class="col-md-12">
+                                 <div class="field-label"><label for="Industry"><?php echo $lang["Industry"]; ?></label></div>
+                            	<input type="text" value="<?php echo $Industry?>" name="Industry" class="form-control">
+                            </div>
+                         </div>
                     </div>
                     <div class="col-md-6">
                     	<div class="form-group row">
                             <div class="col-md-12">
-                                <div class="field-label"><label for="email"><?php echo $lang["Email*"]; ?></label></div>
-                            	<input type="text" value="<?php echo $email?>" name="email" class="form-control">
+                                <div class="field-label"><label for="email"><?php echo $lang["Email contact"]; ?></label></div>
+                            	<input type="text"  value="<?php echo $email?>" name="email" class="form-control">
                             </div>
                          </div>
                          <div class="form-group row">
@@ -210,7 +274,7 @@ foreach($qur_pro as $qur_ar){
                          <div class="form-group row">
                             <div class="col-md-12">
                                 <div class="field-label"><label for="country"><?php echo $lang["Country"]; ?></label></div>
-								<select name="country" class="form-control">
+								<select name="country" class="form-control" id="country">
 								<option value=""><?php echo $lang["Select Country"]; ?></option>
 	<?php foreach($countries as $countrie){
 		echo '<option value="'.$countrie.'">'.$countrie.'</option>';
@@ -218,7 +282,36 @@ foreach($qur_pro as $qur_ar){
 								</select>
                             </div>
                          </div>
-                        
+                         <div class="form-group row">
+                            <div class="col-md-12">
+                                 <div class="field-label"><label for="Sector"><?php echo $lang["Sector"]; ?></label></div>
+                            	<input type="text" value="<?php echo $Sector?>" name="Sector" class="form-control">
+                            </div>
+                         </div>
+                         <div class="form-group row">
+                            <div class="col-md-12">
+                                 <div class="field-label"><label for="Division"><?php echo $lang["Division"]; ?></label></div>
+                            	<input type="text" value="<?php echo $Division?>" name="Division" class="form-control">
+                            </div>
+                         </div>
+                         <div class="form-group row">
+                            <div class="col-md-12">
+                                 <div class="field-label"><label for="Field_of_Study"><?php echo $lang["Field_of_Study"]; ?></label></div>
+                            	<input type="text" value="<?php echo $Field_of_Study?>" name="Field_of_Study" class="form-control">
+                            </div>
+                         </div>
+                         <div class="form-group row">
+                            <div class="col-md-12">
+                                 <div class="field-label"><label for="Preferred_Language"><?php echo $lang["Preferred_Language"]; ?></label></div>
+                            	<input type="text" value="<?php echo $Preferred_Language?>" name="Preferred_Language" class="form-control">
+                            </div>
+                         </div>
+                         <div class="form-group row">
+                            <div class="col-md-12">
+                                 <div class="field-label"><label for="Buyer_Persona"><?php echo $lang["Buyer_Persona"]; ?></label></div>
+                            	<input type="text" value="<?php echo $Buyer_Persona?>" name="Buyer_Persona" class="form-control">
+                            </div>
+                         </div>
 						 
                     </div>
 					<div class="col-md-12 submit-btnal">
@@ -250,4 +343,12 @@ foreach($qur_pro as $qur_ar){
 <script>
 $("#telefono").mask("(999) 999-9999");
 </script>         
+<script>
+$(document).ready(function(){
+var valorpais="<?php echo $country?>";
+var gender="<?php echo $Gender?>";
+$("#country").val(valorpais);
+$("#gender").val(gender);
+});
+</script>
 <?php  include("../templates/admin-footer.php"); ?>
