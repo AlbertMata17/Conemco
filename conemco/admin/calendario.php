@@ -242,6 +242,9 @@ $recentProjects=customer::findBySql("select * from customers WHERE trash != 1 OR
 				</select>
 			</div>
 		  </div>
+		  <!-- <div><p>hola</p><div> -->
+		  <!-- <div><p>hola</p><div> -->
+
 			<div class="form-group"> 
 				<div class="col-sm-offset-2 col-sm-10">
 				  <div class="checkbox">
